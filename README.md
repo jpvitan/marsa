@@ -20,7 +20,7 @@ A simple Python library that encrypts your data using the RSA cryptosystem.
 * Initial release
 
 
-To view the full changelog, [click here]().
+To view the full changelog, [click here](https://github.com/jpvitan/rsa-jpv/blob/master/CHANGELOG.md).
 
 ## Installation
 To install the library, open a terminal window and copy the command below:
@@ -33,7 +33,7 @@ $ pip install rsa-jpv
 While this Python library is capable of encrypting data using the RSA cryptosystem, I would highly advise against using this to encrypt <b>extremely critical and sensitive data</b>. The RSA that is used in practice operates on extremely large numbers, which as of the moment, this library isn't designed to handle.
 
 ## Documentation
-* [API Documentation]()
+* [API Documentation](https://github.com/jpvitan/rsa-jpv/blob/master/docs/api.md)
 
 ### A Simple Example
 #### Problem
