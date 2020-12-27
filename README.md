@@ -1,4 +1,6 @@
 # rsa-jpv
+![](https://img.shields.io/pypi/v/rsa-jpv?color=%231abc9c&style=flat-square)
+![](https://img.shields.io/github/license/jpvitan/rsa-jpv?color=%23f39c12&style=flat-square)
 
 
 A simple Python library that encrypts your data using the RSA cryptosystem.
@@ -23,7 +25,7 @@ A simple Python library that encrypts your data using the RSA cryptosystem.
 To view the full changelog, [click here](https://github.com/jpvitan/rsa-jpv/blob/master/CHANGELOG.md).
 
 ## Installation
-To install the library, open a terminal window and copy the command below:
+To install the library, open a terminal window and copy the command below.
 ```
 $ pip install rsa-jpv
 ```
@@ -79,7 +81,7 @@ At this point, you could already give Bob the public key by telling him the <b>p
 Encrypting a message takes three steps:
 1. Creating an instance of the ```Key``` class by using the values of the public key
 2. Creating an instance of the ```Encryptor``` class by using the instance of the ```Key``` class we created in the first step
-3. Encrypting your message by using the ```encrypt()``` method of the ```Encryptor``` class.
+3. Encrypting your message by using the ```encrypt()``` method of the ```Encryptor``` class
 ```python
 >>> # Bob's code
 >>> from rcj.cryptosystem import rsa
@@ -101,7 +103,7 @@ Bob would need to follow the three steps described above to successfully encrypt
 Decrypting a message takes three steps:
 1. Creating an instance of the ```Key``` class by using the values of the private key
 2. Creating an instance of the ```Decryptor``` class by using the instance of the ```Key``` class we created in the first step
-3. Decrypting your message by using the ```decrypt()``` method of the ```Decryptor``` class.
+3. Decrypting your message by using the ```decrypt()``` method of the ```Decryptor``` class
 ```python
 >>> # Your code
 >>> from rcj.cryptosystem import rsa
