@@ -80,4 +80,4 @@ If no parameters are specified, the function will automatically generate primes 
 Written by Justine Paul Sanchez Vitan.
 
 
-Copyright © 2020 Justine Paul Sanchez Vitan. All rights reserved.
+Copyright © 2021 Justine Paul Sanchez Vitan. All rights reserved.

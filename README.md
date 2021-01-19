@@ -18,8 +18,8 @@ A simple Python library that encrypts your data using the RSA cryptosystem.
 ```
 
 ## Latest Release
-### v0.0.1
-* Initial release
+### v0.0.2
+* Added docstrings
 
 
 To view the full changelog, [click here](https://github.com/jpvitan/rsa-jpv/blob/master/CHANGELOG.md).
@@ -119,4 +119,4 @@ The steps for decrypting a message is very similar to the steps of encrypting a 
 Written by Justine Paul Sanchez Vitan.
 
 
-Copyright © 2020 Justine Paul Sanchez Vitan. All rights reserved.
+Copyright © 2021 Justine Paul Sanchez Vitan. All rights reserved.

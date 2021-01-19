@@ -14,6 +14,13 @@ from rcj.utility import rmath
 
 
 class Key:
+    """
+    A class that holds the prime product and auxiliary value.
+
+    Parameters:
+    prime_product (int): The product of two primes.
+    auxiliary (int): Exponent of the encrypted or decrypted message.
+    """
 
     def __init__(self, prime_product: int, auxiliary: int):
         self.prime_product = prime_product
@@ -24,6 +31,13 @@ class Key:
 
 
 class KeyPair:
+    """
+    A class that holds the public key and private key.
+
+    Parameters:
+    public_key (Key): The public key.
+    private_key (Key): The private key.
+    """
 
     def __init__(self, public_key: Key, private_key: Key):
         self.public_key = public_key
@@ -34,11 +48,27 @@ class KeyPair:
 
 
 class Encryptor:
+    """
+    A class that encrypts data based on the key parameter.
+
+    Parameters:
+    public_key (Key): The public key.
+    """
 
     def __init__(self, public_key: Key):
         self.public_key = public_key
 
     def encrypt(self, message: str) -> str:
+        """
+        A method that takes a string and encrypts it.
+
+        Parameters:
+        message (str): The string to be encrypted.
+
+        Returns:
+        str: The encrypted string.
+        """
+
         encrypted_message = ""
         for character in message:
             encrypted_character = chr((ord(character) ** self.public_key.auxiliary) % self.public_key.prime_product)
@@ -47,11 +77,26 @@ class Encryptor:
 
 
 class Decryptor:
+    """
+    A class that decrypts data based on the key parameter.
+
+    Parameters:
+    private_key (Key): The private key.
+    """
 
     def __init__(self, private_key: Key):
         self.private_key = private_key
 
     def decrypt(self, message: str) -> str:
+        """
+        A method that takes a string and decrypts it.
+
+        Parameters:
+        message (str): The string to be decrypted.
+
+        Returns:
+        str: The decrypted string.
+        """
         decrypted_message = ""
         for character in message:
             decrypted_character = chr((ord(character) ** self.private_key.auxiliary) % self.private_key.prime_product)
@@ -60,6 +105,17 @@ class Decryptor:
 
 
 def generate_key_pair(first_prime: int = None, second_prime: int = None) -> KeyPair:
+    """
+    A function that generates a public key and private key.
+
+    Parameters:
+    first_prime (int): The first prime number.
+    second_prime (int): The second prime number.
+
+    Returns:
+    KeyPair: A class that holds the public key and private key.
+    """
+
     prime_pair = rmath.generate_prime_number_list(size=2, shuffle=True)
     if first_prime is None:
         first_prime = prime_pair[0]
