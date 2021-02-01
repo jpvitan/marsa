@@ -32,10 +32,11 @@ $ pip install rsa-jpv
 <b><i>Note:</i></b> Requires Python 3.6 or greater.
 
 ## Quick Note
-While this Python library is capable of encrypting data using the RSA cryptosystem, I would highly advise against using this to encrypt <b>extremely critical and sensitive data</b>. The RSA that is used in practice operates on extremely large numbers, which as of the moment, this library isn't designed to handle.
+While this Python library is capable of encrypting data using the RSA cryptosystem, I would highly advise against using this to encrypt <b>critical and sensitive data</b>. The RSA that is used in practice operates on extremely large numbers, which as of the moment, this library isn't designed to handle.
 
 ## Documentation
 * [API Documentation](https://github.com/jpvitan/rsa-jpv/blob/master/docs/api.md)
+* [How I Implemented the RSA Algorithm in Python](https://www.jpvitan.com/blog-read.php?id=1)
 
 ### A Simple Example
 #### Problem
