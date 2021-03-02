@@ -98,7 +98,7 @@ Creating an instance of the ```Key``` class takes two parameters: ```prime_produ
 The ```encrypt()``` method of the ```Encryptor``` class takes in a string and returns the encrypted message.
 
 
-Bob would need to follow the three steps described above to successfully encrypt his messages. Once Bob does that, he is now ready to send his encrypted message to you.
+Bob would need to follow the three steps described above to successfully encrypt his message. Once Bob does that, he is now ready to send his encrypted message to you.
 
 #### Decrypting Messages
 Decrypting a message takes three steps:
@@ -114,7 +114,7 @@ Decrypting a message takes three steps:
 >>> print(message)
 "Let's go to the pub tonight."
 ```
-The steps for decrypting a message is very similar to the steps of encrypting a message. The only difference is that the public key is replaced with the private key and the ```Encryptor``` class is replaced with the ```Decryptor``` class.
+The steps for decrypting a message is very similar to those of encrypting a message. The only difference is that the public key is replaced with the private key and the ```Encryptor``` class is replaced with the ```Decryptor``` class.
 
 ----------------------------------------
 Written by Justine Paul Sanchez Vitan.
