@@ -1,28 +1,15 @@
 # rsa-jpv
+
+
 ![](https://img.shields.io/pypi/v/rsa-jpv?color=%231abc9c&style=flat-square)
 ![](https://img.shields.io/github/license/jpvitan/rsa-jpv?color=%23f39c12&style=flat-square)
 
 
 A simple Python library that encrypts your data using the RSA cryptosystem.
-```python
->>> from rcj.cryptosystem import rsa
->>> key_pair = rsa.generate_key_pair()
->>> encryptor = rsa.Encryptor(key_pair.public_key)
->>> encrypted_message = encryptor.encrypt("I love you!")
->>> encrypted_message
-'𢍺𐱽灭ߺ梬𡖉𐱽𘍇ߺ𡆾ꧣ'
->>> decryptor = rsa.Decryptor(key_pair.private_key)
->>> message = decryptor.decrypt(encrypted_message)
->>> message
-'I love you!'
-```
-
-## Latest Release
-### v0.0.2
-* Added docstrings
 
 
-To view the full changelog, [click here](https://github.com/jpvitan/rsa-jpv/blob/master/CHANGELOG.md).
+![Demo](docs/demo.png)
+
 
 ## Installation
 To install the library, open a terminal window and copy the command below.
@@ -31,16 +18,28 @@ $ pip install rsa-jpv
 ```
 <b><i>Note:</i></b> Requires Python 3.6 or greater.
 
+
 ## Quick Note
-This Python library is capable of encrypting and decrypting data using the RSA cryptosystem; however, I would highly advise against using this to encrypt data in a production environment. The goal of this library is to help its users gain a simple understanding on how RSA works. This version of RSA has no padding and has some deterministic properties that makes it less secure than the ones deployed in practice.
+Don't use this library to encrypt data in a production environment. This version of RSA is not optimized for such use and may cause security issues which may lead to data loss or theft.
+
 
 ## Documentation
-* [API Documentation](https://github.com/jpvitan/rsa-jpv/blob/master/docs/api.md)
-* [How I Implemented the RSA Algorithm in Python](https://www.jpvitan.com/blog-read.php?id=1)
 
-### A Simple Example
+
+### Application Programming Interface
+[Link to API](https://github.com/jpvitan/rsa-jpv/blob/master/docs/api.md)
+
+
+### Blog
+[Link to Blog](https://www.jpvitan.com/blog-read.php?id=1)
+
+
+### Example
+
+
 #### Problem
-Suppose that you and Bob are exchanging messages over an unsecure communications channel. Bob informs you that he wants to send you a message that only you and him should know. Since it's an unsecure channel, anyone could tap into your communications and see your messages.
+Suppose that you and Bob are exchanging messages over an unencrypted communications channel. Bob informs you that he wants to send you a message that only the two of you should know. Since it's an unencrypted channel, anyone could tap into your communications and see your messages.
+
 
 #### Solution
 The RSA cryptosystem could help solve the problem described above by encrypting the messages sent by Bob to you.
@@ -54,9 +53,7 @@ Here's what you need to do:
 5. Decrypt the encrypted messages sent by Bob using your private key
 
 
-The following sections will show you how it's done.
-
-#### Generating a Key Pair
+##### Generating a Key Pair
 Generating a key pair is as easy as calling the ```generate_key_pair()``` function.
 ```python
 >>> # Your code
@@ -78,7 +75,8 @@ The function returns an instance of type ```KeyPair``` and contains two attribut
 
 At this point, you could already give Bob the public key by telling him the <b>prime product</b> and <b>auxiliary</b> under the public key section. Always remember to keep your private key a secret!
 
-#### Encrypting Messages
+
+##### Encrypting Messages
 Encrypting a message takes three steps:
 1. Creating an instance of the ```Key``` class by using the values of the public key
 2. Creating an instance of the ```Encryptor``` class by using the instance of the ```Key``` class we created in the first step
@@ -98,9 +96,10 @@ Creating an instance of the ```Key``` class takes two parameters: ```prime_produ
 The ```encrypt()``` method of the ```Encryptor``` class takes in a string and returns the encrypted message.
 
 
-Bob would need to follow the three steps described above to successfully encrypt his message. Once Bob does that, he is now ready to send his encrypted message to you.
+Bob would need to follow the three steps described above to encrypt his message.
 
-#### Decrypting Messages
+
+##### Decrypting Messages
 Decrypting a message takes three steps:
 1. Creating an instance of the ```Key``` class by using the values of the private key
 2. Creating an instance of the ```Decryptor``` class by using the instance of the ```Key``` class we created in the first step
@@ -114,7 +113,7 @@ Decrypting a message takes three steps:
 >>> print(message)
 "Let's go to the pub tonight."
 ```
-The steps for decrypting a message is very similar to those of encrypting a message. The only difference is that the public key is replaced with the private key and the ```Encryptor``` class is replaced with the ```Decryptor``` class.
+
 
 ----------------------------------------
 Written by Justine Paul Sanchez Vitan.
