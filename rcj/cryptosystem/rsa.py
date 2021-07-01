@@ -130,7 +130,8 @@ def generate_key_pair(first_prime: int = None, second_prime: int = None) -> KeyP
     prime_product = first_prime * second_prime
     prime_product_minus_one = (first_prime - 1) * (second_prime - 1)
     public_auxiliary = rmath.find_number_relatively_prime(prime_product_minus_one)
-    private_auxiliary = rmath.gcd_linear_combination(public_auxiliary, prime_product_minus_one)[0]
+    private_auxiliary = rmath.gcd_linear_combination(public_auxiliary, prime_product_minus_one)[
+                            0] % prime_product_minus_one
 
     public_key = Key(prime_product, public_auxiliary)
     private_key = Key(prime_product, private_auxiliary)
