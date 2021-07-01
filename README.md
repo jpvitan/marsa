@@ -8,7 +8,7 @@
 A simple Python library that encrypts your data using the RSA cryptosystem.
 
 
-![Demo](docs/demo.png)
+![Demo](https://github.com/jpvitan/rsa-jpv/blob/master/docs/demo.png)
 
 
 ## Installation
@@ -55,7 +55,7 @@ Here's what you need to do:
 
 ##### Generating a Key Pair
 Generating a key pair is as easy as calling the ```generate_key_pair()``` function.
-```python
+```pycon
 >>> # Your code
 >>> from rcj.cryptosystem import rsa
 >>> key_pair = rsa.generate_key_pair()
@@ -81,7 +81,7 @@ Encrypting a message takes three steps:
 1. Creating an instance of the ```Key``` class by using the values of the public key
 2. Creating an instance of the ```Encryptor``` class by using the instance of the ```Key``` class we created in the first step
 3. Encrypting your message by using the ```encrypt()``` method of the ```Encryptor``` class
-```python
+```pycon
 >>> # Bob's code
 >>> from rcj.cryptosystem import rsa
 >>> public_key = rsa.Key(221147, 11)
@@ -104,7 +104,7 @@ Decrypting a message takes three steps:
 1. Creating an instance of the ```Key``` class by using the values of the private key
 2. Creating an instance of the ```Decryptor``` class by using the instance of the ```Key``` class we created in the first step
 3. Decrypting your message by using the ```decrypt()``` method of the ```Decryptor``` class
-```python
+```pycon
 >>> # Your code
 >>> from rcj.cryptosystem import rsa
 >>> private_key = rsa.Key(221147, 360131)
