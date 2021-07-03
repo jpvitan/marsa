@@ -12,6 +12,14 @@ import math
 import random
 
 
+def power_modulo(base, exponent, divisor) -> int:
+    if exponent < 10:
+        return base ** exponent % divisor
+    quotient = exponent // 2
+    remainder = exponent % 2
+    return (power_modulo(base, remainder + quotient, divisor) * power_modulo(base, quotient, divisor)) % divisor
+
+
 def is_prime(x: int) -> bool:
     if x < 2:
         return False

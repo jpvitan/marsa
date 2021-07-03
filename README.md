@@ -8,7 +8,7 @@
 A simple Python library that encrypts your data using the RSA cryptosystem.
 
 
-![Demo](docs/demo.png)
+![Demo](https://raw.githubusercontent.com/jpvitan/rsa-jpv/master/docs/demo.png)
 
 
 ## Installation
