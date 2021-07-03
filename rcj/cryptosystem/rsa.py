@@ -71,7 +71,8 @@ class Encryptor:
 
         encrypted_message = ""
         for character in message:
-            encrypted_character = chr((ord(character) ** self.public_key.auxiliary) % self.public_key.prime_product)
+            encrypted_character = chr(
+                rmath.power_modulo(ord(character), self.public_key.auxiliary, self.public_key.prime_product))
             encrypted_message = encrypted_message + encrypted_character
         return encrypted_message
 
@@ -99,7 +100,8 @@ class Decryptor:
         """
         decrypted_message = ""
         for character in message:
-            decrypted_character = chr((ord(character) ** self.private_key.auxiliary) % self.private_key.prime_product)
+            decrypted_character = chr(
+                rmath.power_modulo(ord(character), self.private_key.auxiliary, self.private_key.prime_product))
             decrypted_message = decrypted_message + decrypted_character
         return decrypted_message
 
