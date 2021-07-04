@@ -14,7 +14,7 @@ with open('README.md', 'r') as fh:
 
 setuptools.setup(
     name='rsa-jpv',
-    version='0.0.3',
+    version='0.0.4',
     author='Justine Paul Sanchez Vitan',
     author_email='justinepaulvitan5@gmail.com',
     description='A simple Python library that encrypts your data using the RSA cryptosystem.',

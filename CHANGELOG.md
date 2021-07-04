@@ -1,6 +1,10 @@
 # rsa-jpv
 
 
+### v0.0.4
+* Performance improvements
+
+
 ### v0.0.3
 * Performance improvements
 
