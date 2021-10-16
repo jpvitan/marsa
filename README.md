@@ -30,10 +30,6 @@ Don't use this library to encrypt data in a production environment. This version
 [Link to API](https://github.com/jpvitan/rsa-jpv/blob/master/docs/api.md)
 
 
-### Blog
-[Link to Blog](https://www.jpvitan.com/blog-read.php?id=1)
-
-
 ### Example
 
 
