@@ -130,10 +130,10 @@ def generate_key_pair(first_prime: int = None, second_prime: int = None) -> KeyP
     inputchecker.rsa_generate_key_pair(first_prime, second_prime)
 
     prime_product = first_prime * second_prime
-    prime_product_minus_one = (first_prime - 1) * (second_prime - 1)
+    lambda_n = rmath.lcd(first_prime - 1, second_prime - 1)
     public_auxiliary = 65537;
-    private_auxiliary = rmath.gcd_linear_combination(public_auxiliary, prime_product_minus_one)[
-                            0] % prime_product_minus_one
+    private_auxiliary = rmath.gcd_linear_combination(public_auxiliary, lambda_n)[
+                            0] % lambda_n
 
     public_key = Key(prime_product, public_auxiliary)
     private_key = Key(prime_product, private_auxiliary)
