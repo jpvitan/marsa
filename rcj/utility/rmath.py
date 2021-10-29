@@ -109,7 +109,7 @@ def find_number_relatively_prime(x: int, starting_number=3) -> int:
     return y
 
 
-def generate_prime_number_list(prime_range=(101, 997), size: int = None, shuffle=False) -> list:
+def generate_prime_number_list(prime_range=(5000, 10000), size: int = None, shuffle=False) -> list:
     min_number = prime_range[0]
     max_number = prime_range[1]
 

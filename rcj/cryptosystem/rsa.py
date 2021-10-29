@@ -58,7 +58,7 @@ class Encryptor:
     def __init__(self, public_key: Key):
         self.public_key = public_key
 
-    def encrypt(self, message: str) -> str:
+    def encrypt(self, message: int) -> int:
         """
         A method that takes a string and encrypts it.
 
@@ -68,13 +68,7 @@ class Encryptor:
         Returns:
         str: The encrypted string.
         """
-
-        encrypted_message = ""
-        for character in message:
-            encrypted_character = chr(
-                rmath.power_modulo(ord(character), self.public_key.auxiliary, self.public_key.prime_product))
-            encrypted_message = encrypted_message + encrypted_character
-        return encrypted_message
+        return rmath.power_modulo(message, self.public_key.auxiliary, self.public_key.prime_product)
 
 
 class Decryptor:
@@ -88,7 +82,7 @@ class Decryptor:
     def __init__(self, private_key: Key):
         self.private_key = private_key
 
-    def decrypt(self, message: str) -> str:
+    def decrypt(self, message: int) -> int:
         """
         A method that takes a string and decrypts it.
 
@@ -98,12 +92,7 @@ class Decryptor:
         Returns:
         str: The decrypted string.
         """
-        decrypted_message = ""
-        for character in message:
-            decrypted_character = chr(
-                rmath.power_modulo(ord(character), self.private_key.auxiliary, self.private_key.prime_product))
-            decrypted_message = decrypted_message + decrypted_character
-        return decrypted_message
+        return rmath.power_modulo(message, self.private_key.auxiliary, self.private_key.prime_product)
 
 
 def generate_key_pair(first_prime: int = None, second_prime: int = None) -> KeyPair:

@@ -10,8 +10,8 @@ Copyright © 2020 Justine Paul Sanchez Vitan. All rights reserved.
 # IMPORT STATEMENTS
 from rcj.cryptosystem import rsa
 
-first_message = "I love you!"  # The first message we want to encrypt.
-second_message = "Let's go on a date tonight!"  # The second message we want to encrypt.
+first_message = 120
+second_message = 240
 
 key_pair = rsa.generate_key_pair()  # Generate a key pair (public key and private key).
 print(key_pair)
