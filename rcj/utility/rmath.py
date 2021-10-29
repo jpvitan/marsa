@@ -96,6 +96,10 @@ def gcd_linear_combination(x: int, y: int) -> tuple:
     return a, b
 
 
+def lcd(x: int, y: int):
+    return x * y // gcd(x, y)
+
+
 def find_number_relatively_prime(x: int, starting_number=3) -> int:
     y = starting_number
     while True:
