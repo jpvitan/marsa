@@ -4,7 +4,7 @@ setup.py
 
 LICENSE: GNU General Public License v3 (GPLv3)
 Created by Justine Paul Sanchez Vitan.
-Copyright © 2020 Justine Paul Sanchez Vitan. All rights reserved.
+Copyright © 2021 Justine Paul Sanchez Vitan. All rights reserved.
 """
 
 import setuptools
@@ -14,10 +14,10 @@ with open('README.md', 'r') as fh:
 
 setuptools.setup(
     name='rsa-jpv',
-    version='0.0.4',
+    version='1.0.0',
     author='Justine Paul Sanchez Vitan',
     author_email='justinepaulvitan5@gmail.com',
-    description='A simple Python library that encrypts your data using the RSA cryptosystem.',
+    description='A 2048-bit RSA library that operates solely on integers.',
     long_description=long_description,
     long_description_content_type='text/markdown',
     url='https://github.com/jpvitan/rsa-jpv',

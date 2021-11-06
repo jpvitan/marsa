@@ -4,14 +4,14 @@ demo.py
 
 LICENSE: GNU General Public License v3 (GPLv3)
 Created by Justine Paul Sanchez Vitan.
-Copyright © 2020 Justine Paul Sanchez Vitan. All rights reserved.
+Copyright © 2021 Justine Paul Sanchez Vitan. All rights reserved.
 """
 
 # IMPORT STATEMENTS
 from rcj.cryptosystem import rsa
 
-first_message = "I love you!"  # The first message we want to encrypt.
-second_message = "Let's go on a date tonight!"  # The second message we want to encrypt.
+first_message = 1024
+second_message = 2048
 
 key_pair = rsa.generate_key_pair()  # Generate a key pair (public key and private key).
 print(key_pair)
