@@ -59,13 +59,13 @@ class Encryptor:
 
     def encrypt(self, message: int) -> int:
         """
-        A method that takes a string and encrypts it.
+        A method that takes an integer and encrypts it.
 
         Parameters:
-        message (str): The string to be encrypted.
+        message (int): The integer to be encrypted.
 
         Returns:
-        str: The encrypted string.
+        int: The encrypted integer.
         """
         return pow(message, self.public_key.auxiliary, self.public_key.prime_product)
 
@@ -83,24 +83,20 @@ class Decryptor:
 
     def decrypt(self, message: int) -> int:
         """
-        A method that takes a string and decrypts it.
+        A method that takes an integer and decrypts it.
 
         Parameters:
-        message (str): The string to be decrypted.
+        message (int): The integer to be decrypted.
 
         Returns:
-        str: The decrypted string.
+        int: The decrypted integer.
         """
         return pow(message, self.private_key.auxiliary, self.private_key.prime_product)
 
 
-def generate_key_pair(first_prime: int = None, second_prime: int = None) -> KeyPair:
+def generate_key_pair() -> KeyPair:
     """
     A function that generates a public key and private key.
-
-    Parameters:
-    first_prime (int): The first prime number.
-    second_prime (int): The second prime number.
 
     Returns:
     KeyPair: A class that holds the public key and private key.
