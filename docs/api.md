@@ -42,9 +42,9 @@ A class that encrypts data based on the key parameter.
 
 
 ##### encrypt
-A method that takes a string and encrypts it.
+A method that takes an integer and encrypts it.
 ```python
-encrypt(self, message: str) -> str
+encrypt(self, message: int) -> int
 ```
 
 
@@ -63,9 +63,9 @@ A class that decrypts data based on the key parameter.
 
 
 ##### decrypt
-A method that takes a string and decrypts it.
+A method that takes an integer and decrypts it.
 ```python
-decrypt(self, message: str) -> str
+decrypt(self, message: int) -> int
 ```
 
 
@@ -73,18 +73,8 @@ decrypt(self, message: str) -> str
 ### def generate_key_pair
 A function that generates a public key and private key.
 ```python
-generate_key_pair(first_prime: int=None, second_prime: int=None) -> KeyPair
+generate_key_pair() -> KeyPair
 ```
-
-
-#### Function Parameters
-| Parameter         | Type | Description             |
-|-------------------|------|-------------------------|
-| first_prime=None  | int  | The first prime number  |
-| second_prime=None | int  | The second prime number |
-
-
-If no parameters are specified, the function will automatically generate primes for you. It is recommended that you leave the parameters by their default values.
 
 
 ----------------------------------------

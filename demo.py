@@ -10,8 +10,8 @@ Copyright © 2020 Justine Paul Sanchez Vitan. All rights reserved.
 # IMPORT STATEMENTS
 from rcj.cryptosystem import rsa
 
-first_message = 120
-second_message = 240
+first_message = 1024
+second_message = 2048
 
 key_pair = rsa.generate_key_pair()  # Generate a key pair (public key and private key).
 print(key_pair)
