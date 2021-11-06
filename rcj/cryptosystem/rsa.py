@@ -8,7 +8,6 @@ Copyright © 2020 Justine Paul Sanchez Vitan. All rights reserved.
 """
 
 # IMPORT STATEMENTS
-from rcj.utility import inputchecker
 
 from rcj.utility import rmath
 
@@ -68,7 +67,7 @@ class Encryptor:
         Returns:
         str: The encrypted string.
         """
-        return rmath.power_modulo(message, self.public_key.auxiliary, self.public_key.prime_product)
+        return pow(message, self.public_key.auxiliary, self.public_key.prime_product)
 
 
 class Decryptor:
@@ -92,7 +91,7 @@ class Decryptor:
         Returns:
         str: The decrypted string.
         """
-        return rmath.power_modulo(message, self.private_key.auxiliary, self.private_key.prime_product)
+        return pow(message, self.private_key.auxiliary, self.private_key.prime_product)
 
 
 def generate_key_pair(first_prime: int = None, second_prime: int = None) -> KeyPair:
@@ -107,20 +106,12 @@ def generate_key_pair(first_prime: int = None, second_prime: int = None) -> KeyP
     KeyPair: A class that holds the public key and private key.
     """
 
-    prime_pair = rmath.generate_prime_number_list(size=2, shuffle=True)
-    if first_prime is None:
-        first_prime = prime_pair[0]
-        if first_prime == second_prime:
-            first_prime = prime_pair[1]
-    if second_prime is None:
-        second_prime = prime_pair[1]
-        if first_prime == second_prime:
-            second_prime = prime_pair[0]
-    inputchecker.rsa_generate_key_pair(first_prime, second_prime)
+    first_prime = rmath.generate_prime_candidate(1024)
+    second_prime = rmath.generate_prime_candidate(1024)
 
     prime_product = first_prime * second_prime
     lambda_n = rmath.lcd(first_prime - 1, second_prime - 1)
-    public_auxiliary = 65537;
+    public_auxiliary = 65537
     private_auxiliary = rmath.gcd_linear_combination(public_auxiliary, lambda_n)[
                             0] % lambda_n
 
