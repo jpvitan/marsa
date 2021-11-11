@@ -50,7 +50,7 @@ def generate_prime_candidate(size: int) -> int:
 
 
 def rabin_miller(p: int) -> bool:
-    a = 3
+    a = random.randint(1, p - 1)
     s = 0
     t = p - 1
     while t % 2 == 0:
