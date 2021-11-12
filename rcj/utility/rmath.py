@@ -93,9 +93,10 @@ def gcd_linear_combination(x: int, y: int) -> tuple:
     original_x = x
     original_y = y
 
-    coefficient_list = []
-    coefficient_list.append((0, 1))
-    coefficient_list.append((1, -(y // x)))
+    a_last = 0
+    b_last = 1
+    a = 1
+    b = -(y // x)
 
     iteration = 1
 
@@ -106,28 +107,21 @@ def gcd_linear_combination(x: int, y: int) -> tuple:
 
         if iteration != 1:
             quotient = y // x
-            a = int(coefficient_list[iteration - 2][0] - (coefficient_list[iteration - 1][0] * quotient))
-            b = int(coefficient_list[iteration - 2][1] - (coefficient_list[iteration - 1][1] * quotient))
-            coefficient_list.append((a, b))
+            a_temp = a
+            b_temp = b
+            a = a_last - (a * quotient)
+            b = b_last - (b * quotient)
+            a_last = a_temp
+            b_last = b_temp
 
         y = x
         x = r
         iteration = iteration + 1
 
-    a = coefficient_list[-1][1]
-    b = coefficient_list[-1][0]
+    temp = a
+    a = b
+    b = temp
 
-    if a < 0:
-        i = 2
-        while True:
-            a_candidate = a + i * original_y
-            b_candidate = b - i * original_x
-
-            if a_candidate > 0:
-                a = a_candidate
-                b = b_candidate
-                break
-            i = i + 1
     return a, b
 
 

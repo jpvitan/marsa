@@ -20,7 +20,7 @@ class TestRMath(unittest.TestCase):
         self.ex_out_gcd = [2, 3, 1, 1, 10, 5]
 
         self.in_gcd_linear_combination = self.in_gcd
-        self.ex_out_gcd_linear_combination = [(15, -11), (17, -11), (31, -20), (24, -13), (259, -239), (5, -2)]
+        self.ex_out_gcd_linear_combination = [(-1, 1), (-1, 1), (-3, 2), (24, -13), (-1, 1), (5, -2)]
 
         self.in_lcd = [(6, 8), (6, 9), (11, 17), (45, 83), (120, 130), (365, 910)]
         self.ex_out_lcd = [24, 18, 187, 3735, 1560, 66430]

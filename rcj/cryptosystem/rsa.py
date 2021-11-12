@@ -14,19 +14,19 @@ from rcj.utility import rmath
 
 class Key:
     """
-    A class that holds the prime product and auxiliary value.
+    A class that holds the product of two primes and exponent of the public or private key.
 
     Parameters:
-    prime_product (int): The product of two primes.
-    auxiliary (int): Exponent of the encrypted or decrypted message.
+    Product (int): The product of two primes.
+    Exponent (int): The exponent of the public or private key.
     """
 
-    def __init__(self, prime_product: int, auxiliary: int):
-        self.prime_product = prime_product
-        self.auxiliary = auxiliary
+    def __init__(self, product: int, exponent: int):
+        self.product = product
+        self.exponent = exponent
 
     def __str__(self):
-        return "Key Contents:\nPrime Product = {:d}\nAuxiliary = {:d}".format(self.prime_product, self.auxiliary)
+        return "Key Contents:\nProduct = {:d}\nExponent = {:d}".format(self.product, self.exponent)
 
 
 class KeyPair:
@@ -48,7 +48,7 @@ class KeyPair:
 
 class Encryptor:
     """
-    A class that encrypts data based on the key parameter.
+    A class that encrypts data based on the provided key.
 
     Parameters:
     public_key (Key): The public key.
@@ -67,12 +67,12 @@ class Encryptor:
         Returns:
         int: The encrypted integer.
         """
-        return pow(message, self.public_key.auxiliary, self.public_key.prime_product)
+        return pow(message, self.public_key.exponent, self.public_key.product)
 
 
 class Decryptor:
     """
-    A class that decrypts data based on the key parameter.
+    A class that decrypts data based on the provided key.
 
     Parameters:
     private_key (Key): The private key.
@@ -91,12 +91,12 @@ class Decryptor:
         Returns:
         int: The decrypted integer.
         """
-        return pow(message, self.private_key.auxiliary, self.private_key.prime_product)
+        return pow(message, self.private_key.exponent, self.private_key.product)
 
 
 def generate_key_pair() -> KeyPair:
     """
-    A function that generates a public key and private key.
+    A function that generates a public key and a private key.
 
     Returns:
     KeyPair: A class that holds the public key and private key.
@@ -105,14 +105,12 @@ def generate_key_pair() -> KeyPair:
     first_prime = rmath.generate_prime_candidate(1024)
     second_prime = rmath.generate_prime_candidate(1024)
 
-    prime_product = first_prime * second_prime
+    product = first_prime * second_prime
     lambda_n = rmath.lcd(first_prime - 1, second_prime - 1)
-    public_auxiliary = 65537
-    private_auxiliary = rmath.gcd_linear_combination(public_auxiliary, lambda_n)[
-                            0] % lambda_n
-
-    public_key = Key(prime_product, public_auxiliary)
-    private_key = Key(prime_product, private_auxiliary)
+    public_exponent = 65537
+    private_exponent = rmath.gcd_linear_combination(public_exponent, lambda_n)[0] % lambda_n
+    public_key = Key(product, public_exponent)
+    private_key = Key(product, private_exponent)
     key_pair = KeyPair(public_key, private_key)
 
     return key_pair
