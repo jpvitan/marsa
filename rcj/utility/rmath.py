@@ -119,7 +119,7 @@ def gcd_linear_combination(x: int, y: int) -> tuple:
         iteration = iteration + 1
 
     temp = a
-    a = b % original_y
+    a = b
     b = temp
 
     return a, b
