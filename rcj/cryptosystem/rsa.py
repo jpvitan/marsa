@@ -108,9 +108,7 @@ def generate_key_pair() -> KeyPair:
     product = first_prime * second_prime
     lambda_n = rmath.lcd(first_prime - 1, second_prime - 1)
     public_exponent = 65537
-    private_exponent = rmath.gcd_linear_combination(public_exponent, lambda_n)[
-                           0] % lambda_n
-
+    private_exponent = rmath.gcd_linear_combination(public_exponent, lambda_n)[0]
     public_key = Key(product, public_exponent)
     private_key = Key(product, private_exponent)
     key_pair = KeyPair(public_key, private_key)
