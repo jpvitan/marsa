@@ -44,8 +44,17 @@ def generate_prime_candidate(size: int) -> int:
                 prime_candidate_is_composite = True
                 break
 
-        if prime_candidate_is_composite or not rabin_miller(prime_candidate):
+        if prime_candidate_is_composite:
             continue
+
+        passed_rabin_miller = True
+        for i in range(4):
+            if not rabin_miller(prime_candidate):
+                passed_rabin_miller = False
+                break
+        if not passed_rabin_miller:
+            continue
+
         return prime_candidate
 
 
