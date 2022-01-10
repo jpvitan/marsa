@@ -44,8 +44,17 @@ def generate_prime_candidate(size: int) -> int:
                 prime_candidate_is_composite = True
                 break
 
-        if prime_candidate_is_composite or not rabin_miller(prime_candidate):
+        if prime_candidate_is_composite:
             continue
+
+        passed_rabin_miller = True
+        for i in range(4):
+            if not rabin_miller(prime_candidate):
+                passed_rabin_miller = False
+                break
+        if not passed_rabin_miller:
+            continue
+
         return prime_candidate
 
 
@@ -56,13 +65,14 @@ def rabin_miller(p: int) -> bool:
     while t % 2 == 0:
         s = s + 1
         t = t // 2
-    if pow(a, p - 1, p) != 1:
-        return False
+    modulo_result = pow(a, t, p)
+    if modulo_result == 1 or modulo_result == p - 1:
+        return True
     for i in range(1, s):
-        if pow(a, 2 ** i * t, p) == 1 and (
-                pow(a, 2 ** (i - 1) * t, p) != 1 or pow(a, 2 ** (i - 1) * t, p) != -1):
-            return False
-    return True
+        modulo_result = pow(a, 2 ** i * t, p)
+        if modulo_result == p - 1:
+            return True
+    return False
 
 
 def gcd(x: int, y: int) -> int:
