@@ -32,6 +32,12 @@ $ pip install rsa-jpv
 [API Documentation](https://github.com/jpvitan/rsa-jpv/blob/master/docs/api.md)
 
 
+## ⚠️ Warning
+
+
+The objective of this library is to teach its users the mathematical foundations and concepts behind RSA. This library is capable of encrypting or decrypting sensitive information. However, we don't recommend using this for that purpose, as it lacks the additional security features required for practical use.
+
+
 ## ©️ Copyright
 
 
