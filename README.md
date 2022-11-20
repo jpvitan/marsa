@@ -10,13 +10,7 @@
 ## About
 
 
-rsa-jpv is a 2048-bit RSA library that operates solely on integers. It has an object-oriented interface that's easy and light to use.
-
-
-This project was built by Justine Paul Vitan to demonstrate his capabilities in cryptography and number theory. Most algorithms in rsa-jpv are made from the ground up and don't use third-party libraries.
-
-
-The implementation of rsa-jpv stems from the fundamentals of number theory and does not follow standards imposed for practical use.
+rsa-jpv is a 2048-bit RSA library that operates solely on integers. It has an object-oriented interface that's easy and light to use. 
 
 
 ## Installation
@@ -25,7 +19,7 @@ The implementation of rsa-jpv stems from the fundamentals of number theory and d
 To install the library, open a terminal window and copy the command below.
 
 
-```
+```bash
 $ pip install rsa-jpv
 ```
 
@@ -39,7 +33,7 @@ $ pip install rsa-jpv
 ## Warning
 
 
-The objective of this library is to teach its users the mathematical foundations and concepts behind RSA. This library is capable of encrypting or decrypting sensitive information. However, we don't recommend using this for that purpose, as it lacks the additional security features required for practical use.
+This library is not suitable for any production-grade software. Don't use this to encrypt any sensitive information or data. The developer is not responsible for any damage caused by this library.
 
 
 ## License
