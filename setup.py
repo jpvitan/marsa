@@ -14,7 +14,7 @@ with open('README.md', 'r') as fh:
 
 setuptools.setup(
     name='rsa-jpv',
-    version='1.0.2',
+    version='1.0.3',
     author='Justine Paul Sanchez Vitan',
     author_email='justinepaulvitan5@gmail.com',
     description='A 2048-bit RSA library that operates solely on integers.',

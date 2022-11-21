@@ -20,7 +20,7 @@ To install the library, open a terminal window and copy the command below.
 
 
 ```bash
-$ pip install rsa-jpv
+pip install rsa-jpv
 ```
 
 
