@@ -13,4 +13,4 @@ Built by [Justine Paul Vitan](https://jpvitan.com) as a solo project to demonstr
 ### License
 
 
-This project is under the [MIT license](). Please read the terms and conditions stated within the license before attempting any modification or distribution of the software.
+This project is under the [MIT license](https://github.com/jpvitan/marsa/blob/master/LICENSE). Please read the terms and conditions stated within the license before attempting any modification or distribution of the software.
