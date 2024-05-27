@@ -1,51 +1,16 @@
-<h1 align="center">rsa-jpv</h1>
-<p align="center">A 2048-bit RSA library that operates solely on integers.</p>
+**MARSA** is a Python library that lets you experiment with the mathematics of the Rivest–Shamir–Adleman (RSA) cryptosystem.
 
 
-![Badge](https://img.shields.io/pypi/pyversions/rsa-jpv)
-![Badge](https://img.shields.io/pypi/v/rsa-jpv)
-![Badge](https://img.shields.io/pypi/l/rsa-jpv)
+## 🛠️ Software
 
 
-## About
+### Developer
 
 
-rsa-jpv is a 2048-bit RSA library that operates solely on integers. It has an object-oriented interface that's easy and light to use. 
+Built by [Justine Paul Vitan](https://jpvitan.com) as a solo project to demonstrate his knowledge in cryptography and number theory. The source code of this project is open and available to the public via GitHub for transparency and open-source collaboration.
 
 
-## Installation
+### License
 
 
-To install the library, open a terminal window and copy the command below.
-
-
-```bash
-pip install rsa-jpv
-```
-
-
-## Documentation
-
-
-[API Documentation](https://github.com/jpvitan/rsa-jpv/blob/master/docs/api.md)
-
-
-## Warning
-
-
-This library is not suitable for any production-grade software. Don't use this to encrypt any sensitive information or data. The developer is not responsible for any damage caused by this library.
-
-
-## License
-
-
-This project is under the [GNU General Public License v3.0](https://github.com/jpvitan/rsa-jpv/blob/master/LICENSE). Please read the terms and conditions stated within the license before attempting any modification or distribution of the software.
-
-
-## Copyright
-
-
-Developed and Designed by Justine Paul Sanchez Vitan.
-
-
-Copyright © 2021 Justine Paul Sanchez Vitan. All rights reserved.
+This project is under the [MIT license](). Please read the terms and conditions stated within the license before attempting any modification or distribution of the software.
