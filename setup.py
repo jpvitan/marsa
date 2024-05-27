@@ -19,18 +19,18 @@ with open('README.md', 'r') as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name='rsa-jpv',
-    version='1.0.3',
-    author='Justine Paul Sanchez Vitan',
+    name='MARSA',
+    version='1.0.0',
+    author='Justine Paul Vitan',
     author_email='justinepaulvitan5@gmail.com',
-    description='A 2048-bit RSA library that operates solely on integers.',
+    description='A Python library that lets you experiment with the mathematics of the Rivest–Shamir–Adleman (RSA) cryptosystem.',
     long_description=long_description,
     long_description_content_type='text/markdown',
-    url='https://github.com/jpvitan/rsa-jpv',
+    url='https://github.com/jpvitan/marsa',
     packages=['rcj', 'rcj.cryptosystem', 'rcj.utility'],
     classifiers=[
         'Programming Language :: Python :: 3',
-        'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
+        'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
     ],
     python_requires='>=3.6'
