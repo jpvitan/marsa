@@ -13,7 +13,7 @@ Developer's Website: https://jpvitan.com/
 
 """
 
-from marsa.utility import rmath
+from marsa.cryptosystem import rmath
 
 
 class Key:
