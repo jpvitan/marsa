@@ -16,7 +16,7 @@ Developer's Website: https://jpvitan.com/
 # IMPORT STATEMENTS
 import unittest
 
-from rcj.utility import rmath
+from marsa.utility import rmath
 
 
 class TestRMath(unittest.TestCase):

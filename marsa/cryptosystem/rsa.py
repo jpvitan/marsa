@@ -15,7 +15,7 @@ Developer's Website: https://jpvitan.com/
 
 # IMPORT STATEMENTS
 
-from rcj.utility import rmath
+from marsa.utility import rmath
 
 
 class Key:
