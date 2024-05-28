@@ -15,7 +15,7 @@ Developer's Website: https://jpvitan.com/
 
 import unittest
 
-from marsa.cryptosystem import rmath
+from marsa.cryptosystem import math
 
 
 class TestRMath(unittest.TestCase):
@@ -35,17 +35,17 @@ class TestRMath(unittest.TestCase):
 
     def test_gcd(self):
         for i in range(0, len(self.in_gcd)):
-            self.assertEqual(rmath.gcd(self.in_gcd[i][0], self.in_gcd[i][1]), self.ex_out_gcd[i])
+            self.assertEqual(math.gcd(self.in_gcd[i][0], self.in_gcd[i][1]), self.ex_out_gcd[i])
 
     def test_gcd_linear_combination(self):
         for i in range(0, len(self.in_gcd_linear_combination)):
-            self.assertEqual(rmath.gcd_linear_combination(self.in_gcd_linear_combination[i][0],
-                                                          self.in_gcd_linear_combination[i][1]),
+            self.assertEqual(math.gcd_linear_combination(self.in_gcd_linear_combination[i][0],
+                                                         self.in_gcd_linear_combination[i][1]),
                              self.ex_out_gcd_linear_combination[i])
 
     def test_lcd(self):
         for i in range(0, len(self.in_lcd)):
-            self.assertEqual(rmath.lcd(self.in_lcd[i][0], self.in_lcd[i][1]), self.ex_out_lcd[i])
+            self.assertEqual(math.lcd(self.in_lcd[i][0], self.in_lcd[i][1]), self.ex_out_lcd[i])
 
 
 if __name__ == "__main__":

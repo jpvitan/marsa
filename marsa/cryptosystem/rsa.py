@@ -13,7 +13,7 @@ Developer's Website: https://jpvitan.com/
 
 """
 
-from marsa.cryptosystem import rmath
+from marsa.cryptosystem import math
 
 
 class Key:
@@ -106,13 +106,13 @@ def generate_key_pair() -> KeyPair:
     KeyPair: A class that holds the public key and private key.
     """
 
-    first_prime = rmath.generate_prime_candidate(1024)
-    second_prime = rmath.generate_prime_candidate(1024)
+    first_prime = math.generate_prime_candidate(1024)
+    second_prime = math.generate_prime_candidate(1024)
 
     product = first_prime * second_prime
-    lambda_n = rmath.lcd(first_prime - 1, second_prime - 1)
+    lambda_n = math.lcd(first_prime - 1, second_prime - 1)
     public_exponent = 65537
-    private_exponent = rmath.gcd_linear_combination(public_exponent, lambda_n)[0] % lambda_n
+    private_exponent = math.gcd_linear_combination(public_exponent, lambda_n)[0] % lambda_n
     public_key = Key(product, public_exponent)
     private_key = Key(product, private_exponent)
     key_pair = KeyPair(public_key, private_key)
