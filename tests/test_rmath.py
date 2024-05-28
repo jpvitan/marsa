@@ -15,7 +15,7 @@ Developer's Website: https://jpvitan.com/
 
 import unittest
 
-from marsa.cryptosystem import math
+from marsa import math
 
 
 class TestRMath(unittest.TestCase):

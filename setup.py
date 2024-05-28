@@ -27,7 +27,7 @@ setuptools.setup(
     long_description=long_description,
     long_description_content_type='text/markdown',
     url='https://github.com/jpvitan/marsa',
-    packages=['marsa', 'marsa.cryptosystem', 'marsa.utility'],
+    packages=['marsa'],
     classifiers=[
         'Programming Language :: Python :: 3',
         'License :: OSI Approved :: MIT License',
