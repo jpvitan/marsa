@@ -13,8 +13,6 @@ Developer's Website: https://jpvitan.com/
 
 """
 
-# IMPORT STATEMENTS
-
 from marsa.utility import rmath
 
 

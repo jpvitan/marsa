@@ -13,7 +13,6 @@ Developer's Website: https://jpvitan.com/
 
 """
 
-# IMPORT STATEMENTS
 import random
 
 
