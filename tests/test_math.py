@@ -18,7 +18,7 @@ import unittest
 from marsa import math
 
 
-class TestRMath(unittest.TestCase):
+class TestMath(unittest.TestCase):
 
     def setUp(self):
         self.in_gcd = [(6, 8), (6, 9), (11, 17), (45, 83), (120, 130), (365, 910)]
