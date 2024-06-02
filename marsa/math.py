@@ -400,9 +400,6 @@ def gcd_linear_combination(x: int, y: int) -> tuple:
     if x == 0:
         return y
 
-    original_x = x
-    original_y = y
-
     a_last = 0
     b_last = 1
     a = 1
