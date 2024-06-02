@@ -1,6 +1,10 @@
 **MARSA** is a Python library that lets you experiment with the mathematics of the Rivest–Shamir–Adleman (RSA) cryptosystem.
 
 
+![Badge](https://img.shields.io/github/license/jpvitan/marsa)
+![Badge](https://img.shields.io/badge/code%20style-black-000000.svg)
+
+
 ## 🛠️ Software
 
 
