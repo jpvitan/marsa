@@ -4,7 +4,6 @@ MARSA
 A Python library that lets you experiment with the mathematics of the Rivest–Shamir–Adleman (RSA) cryptosystem.
 
 This project is under the MIT license.
-Please read the terms and conditions stated within the license before attempting any modification or distribution of the software.
 
 Copyright © 2024 Justine Paul Vitan. All rights reserved.
 
