@@ -398,7 +398,7 @@ def gcd_linear_combination(x: int, y: int) -> tuple:
         y = x
         x = temp
     if x == 0:
-        return y
+        return 0, 1
 
     a_last = 0
     b_last = 1
