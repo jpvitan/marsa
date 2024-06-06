@@ -8,6 +8,17 @@
 ## 📋 Quick Guide
 
 
+### Installation
+
+
+You can install **MARSA** using pip. Simply run the following command in your terminal or command prompt:
+
+
+```
+pip install
+```
+
+
 ## 🛠️ Software
 
 
