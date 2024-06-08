@@ -364,12 +364,12 @@ def rabin_miller(p: int) -> bool:
     while t % 2 == 0:
         s = s + 1
         t = t // 2
-    modulo_result = pow(a, t, p)
-    if modulo_result == 1 or modulo_result == p - 1:
+    result = pow(a, t, p)
+    if result == 1 or result == p - 1:
         return True
     for i in range(1, s):
-        modulo_result = pow(a, 2**i * t, p)
-        if modulo_result == p - 1:
+        result = pow(a, 2**i * t, p)
+        if result == p - 1:
             return True
     return False
 
