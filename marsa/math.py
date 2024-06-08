@@ -404,14 +404,14 @@ def gcd_linear_combination(x: int, y: int) -> tuple:
     a = 1
     b = -(y // x)
 
-    iteration = 1
+    i = 1
 
     while True:
         r = y % x
         if r == 0:
             break
 
-        if iteration != 1:
+        if i != 1:
             quotient = y // x
             a_temp = a
             b_temp = b
@@ -422,7 +422,7 @@ def gcd_linear_combination(x: int, y: int) -> tuple:
 
         y = x
         x = r
-        iteration = iteration + 1
+        i = i + 1
 
     temp = a
     a = b
