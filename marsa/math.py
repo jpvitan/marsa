@@ -335,11 +335,11 @@ def generate_prime(size: int) -> int:
         raise Exception("Insufficient Size")
 
     while True:
-        prime_candidate = random.randint(lower_bound, upper_bound)
+        prime = random.randint(lower_bound, upper_bound)
         prime_candidate_is_composite = False
 
         for i in primes:
-            if prime_candidate % i == 0:
+            if prime % i == 0:
                 prime_candidate_is_composite = True
                 break
 
@@ -348,13 +348,13 @@ def generate_prime(size: int) -> int:
 
         passed_rabin_miller = True
         for i in range(4):
-            if not rabin_miller(prime_candidate):
+            if not rabin_miller(prime):
                 passed_rabin_miller = False
                 break
         if not passed_rabin_miller:
             continue
 
-        return prime_candidate
+        return prime
 
 
 def rabin_miller(p: int) -> bool:
