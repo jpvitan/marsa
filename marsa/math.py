@@ -332,7 +332,7 @@ def generate_prime_candidate(size: int) -> int:
     upper_bound = 2**size - 1
 
     if lower_bound <= primes[len(primes) - 1]:
-        raise Exception("Size is too small!")
+        raise Exception("Insufficient Size")
 
     while True:
         prime_candidate = random.randint(lower_bound, upper_bound)
