@@ -346,12 +346,12 @@ def generate_prime(size: int) -> int:
         if composite:
             continue
 
-        passed_rabin_miller = True
+        passed = True
         for i in range(4):
             if not rabin_miller(prime):
-                passed_rabin_miller = False
+                passed = False
                 break
-        if not passed_rabin_miller:
+        if not passed:
             continue
 
         return prime
