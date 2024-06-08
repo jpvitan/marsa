@@ -336,14 +336,14 @@ def generate_prime(size: int) -> int:
 
     while True:
         prime = random.randint(lower_bound, upper_bound)
-        prime_candidate_is_composite = False
+        composite = False
 
         for i in primes:
             if prime % i == 0:
-                prime_candidate_is_composite = True
+                composite = True
                 break
 
-        if prime_candidate_is_composite:
+        if composite:
             continue
 
         passed_rabin_miller = True
