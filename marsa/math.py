@@ -338,8 +338,8 @@ def generate_prime(size: int) -> int:
         prime_candidate = random.randint(lower_bound, upper_bound)
         prime_candidate_is_composite = False
 
-        for prime in primes:
-            if prime_candidate % prime == 0:
+        for i in primes:
+            if prime_candidate % i == 0:
                 prime_candidate_is_composite = True
                 break
 
