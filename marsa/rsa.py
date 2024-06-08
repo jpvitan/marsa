@@ -109,8 +109,8 @@ def generate_key_pair() -> KeyPair:
     KeyPair: A class that holds the public key and private key.
     """
 
-    first_prime = math.generate_prime_candidate(1024)
-    second_prime = math.generate_prime_candidate(1024)
+    first_prime = math.generate_prime(1024)
+    second_prime = math.generate_prime(1024)
 
     product = first_prime * second_prime
     lambda_n = math.lcd(first_prime - 1, second_prime - 1)

@@ -15,7 +15,7 @@ Developer's Website: https://jpvitan.com/
 import random
 
 
-def generate_prime_candidate(size: int) -> int:
+def generate_prime(size: int) -> int:
     primes = [
         2,
         3,
