@@ -42,5 +42,5 @@ class Decryptor:
 
 class KeyPair:
 
-    def __init__(self, size: int = 2048):
+    def __init__(self, size: int = 2048, public_exponent: int = 65537):
         pass
