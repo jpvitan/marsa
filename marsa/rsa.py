@@ -22,13 +22,6 @@ class Key:
         self.exponent = exponent
 
 
-class KeyPair:
-
-    def __init__(self, public_key: Key, private_key: Key):
-        self.public_key = public_key
-        self.private_key = private_key
-
-
 class Encryptor:
 
     def __init__(self, public_key: Key):
@@ -45,3 +38,10 @@ class Decryptor:
 
     def decrypt(self, message: int) -> int:
         return pow(message, self.private_key.exponent, self.private_key.product)
+
+
+class KeyPair:
+
+    def __init__(self, public_key: Key, private_key: Key):
+        self.public_key = public_key
+        self.private_key = private_key
