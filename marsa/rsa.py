@@ -21,22 +21,12 @@ class Key:
         self.product = product
         self.exponent = exponent
 
-    def __str__(self):
-        return "Key Contents:\nProduct = {:d}\nExponent = {:d}".format(
-            self.product, self.exponent
-        )
-
 
 class KeyPair:
 
     def __init__(self, public_key: Key, private_key: Key):
         self.public_key = public_key
         self.private_key = private_key
-
-    def __str__(self):
-        return "[PUBLIC KEY]\n{:s}\n\n[PRIVATE KEY]\n{:s}".format(
-            str(self.public_key), str(self.private_key)
-        )
 
 
 class Encryptor:
@@ -58,7 +48,6 @@ class Decryptor:
 
 
 def generate_key_pair() -> KeyPair:
-
     first_prime = math.generate_prime(1024)
     second_prime = math.generate_prime(1024)
 
