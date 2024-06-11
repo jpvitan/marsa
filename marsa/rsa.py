@@ -45,20 +45,3 @@ class Decryptor:
 
     def decrypt(self, message: int) -> int:
         return pow(message, self.private_key.exponent, self.private_key.product)
-
-
-def generate_key_pair() -> KeyPair:
-    first_prime = math.generate_prime(1024)
-    second_prime = math.generate_prime(1024)
-
-    product = first_prime * second_prime
-    lambda_n = math.lcd(first_prime - 1, second_prime - 1)
-    public_exponent = 65537
-    private_exponent = (
-        math.gcd_linear_combination(public_exponent, lambda_n)[0] % lambda_n
-    )
-    public_key = Key(product, public_exponent)
-    private_key = Key(product, private_exponent)
-    key_pair = KeyPair(public_key, private_key)
-
-    return key_pair
