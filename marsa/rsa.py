@@ -43,4 +43,15 @@ class Decryptor:
 class KeyPair:
 
     def __init__(self, size: int = 2048, public_exponent: int = 65537):
-        pass
+        first_prime = math.generate_prime(size // 2)
+        second_prime = math.generate_prime(size // 2)
+
+        product = first_prime * second_prime
+        lambda_n = math.lcd(first_prime - 1, second_prime - 1)
+
+        private_exponent = (
+            math.gcd_linear_combination(public_exponent, lambda_n)[0] % lambda_n
+        )
+
+        self.public_key = Key(product, public_exponent)
+        self.private_key = Key(product, private_exponent)
