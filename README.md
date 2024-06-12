@@ -22,6 +22,16 @@ pip install
 ### Key Generation
 
 
+To generate a key pair, import the `rsa` module from the `marsa` package and create an instance of the `KeyPair` class:
+
+
+```python
+from marsa import rsa
+
+key_pair = rsa.KeyPair()
+```
+
+
 ## 🛠️ Software
 
 
