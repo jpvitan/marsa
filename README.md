@@ -44,7 +44,7 @@ secret_message = encryptor.encrypt(message)
 ```
 
 
-If you don't have access to the `KeyPair` object, you can manually create a key by using the `Key` class and passing in the required parameters:
+If you don't have access to the `KeyPair` object, you can manually create a key by using the `Key` class:
 
 
 ```python
