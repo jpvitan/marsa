@@ -32,6 +32,9 @@ key_pair = rsa.KeyPair()
 ```
 
 
+### Encryption
+
+
 ## 🛠️ Software
 
 
