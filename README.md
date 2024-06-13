@@ -35,6 +35,14 @@ key_pair = rsa.KeyPair()
 ### Encryption
 
 
+To encrypt, create an instance of the `Encryptor` class with the public key from your `KeyPair` object:
+
+
+```python
+encryptor = rsa.Encryptor(key_pair.public_key)
+```
+
+
 ## 🛠️ Software
 
 
