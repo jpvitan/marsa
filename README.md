@@ -77,3 +77,12 @@ Built by [Justine Paul Vitan](https://jpvitan.com) as a solo project to demonstr
 
 
 This project is under the [MIT license](https://github.com/jpvitan/marsa/blob/master/LICENSE). Please read the terms and conditions stated within the license before attempting any modification or distribution of the software.
+
+
+## ⚠️️ Warning
+
+
+### Production Use
+
+
+**MARSA** is intended solely for educational purposes to illustrate the fundamental concepts of RSA encryption and decryption. It is not suitable for use in production environments where security is paramount. Please be aware that this implementation lacks essential security features, such as proper padding schemes, and should not be relied upon for real-world applications. For secure RSA implementations suitable for production use, consider utilizing established cryptographic libraries and frameworks.
