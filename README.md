@@ -52,6 +52,12 @@ public_key = rsa.Key(product, exponent)
 ```
 
 
+### Decryption
+
+
+Decryption works similar to encryption. If you need to decrypt, create an instance of the `Decryptor` class with the private key from your `KeyPair` object and use the `decrypt()` method:
+
+
 ## 🛠️ Software
 
 
