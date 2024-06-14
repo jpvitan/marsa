@@ -14,10 +14,10 @@ Developer's Website: https://jpvitan.com/
 
 import unittest
 
-from marsa import math
+from marsa import compute
 
 
-class TestMath(unittest.TestCase):
+class TestCompute(unittest.TestCase):
     def setUp(self):
         self.in_gcd = [(6, 8), (6, 9), (11, 17), (45, 83), (120, 130), (365, 910)]
         self.ex_out_gcd = [2, 3, 1, 1, 10, 5]
@@ -41,13 +41,13 @@ class TestMath(unittest.TestCase):
     def test_gcd(self):
         for i in range(0, len(self.in_gcd)):
             self.assertEqual(
-                math.gcd(self.in_gcd[i][0], self.in_gcd[i][1]), self.ex_out_gcd[i]
+                compute.gcd(self.in_gcd[i][0], self.in_gcd[i][1]), self.ex_out_gcd[i]
             )
 
     def test_gcd_linear_combination(self):
         for i in range(0, len(self.in_gcd_linear_combination)):
             self.assertEqual(
-                math.gcd_linear_combination(
+                compute.gcd_linear_combination(
                     self.in_gcd_linear_combination[i][0],
                     self.in_gcd_linear_combination[i][1],
                 ),
@@ -57,7 +57,7 @@ class TestMath(unittest.TestCase):
     def test_lcd(self):
         for i in range(0, len(self.in_lcd)):
             self.assertEqual(
-                math.lcd(self.in_lcd[i][0], self.in_lcd[i][1]), self.ex_out_lcd[i]
+                compute.lcd(self.in_lcd[i][0], self.in_lcd[i][1]), self.ex_out_lcd[i]
             )
 
 

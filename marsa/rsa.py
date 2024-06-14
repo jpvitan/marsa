@@ -12,7 +12,7 @@ Developer's Website: https://jpvitan.com/
 
 """
 
-from marsa import math
+from marsa import compute
 
 
 class Key:
@@ -43,14 +43,14 @@ class Decryptor:
 class KeyPair:
 
     def __init__(self, size: int = 2048, public_exponent: int = 65537):
-        first_prime = math.generate_prime(size // 2)
-        second_prime = math.generate_prime(size // 2)
+        first_prime = compute.generate_prime(size // 2)
+        second_prime = compute.generate_prime(size // 2)
 
         product = first_prime * second_prime
-        lambda_n = math.lcd(first_prime - 1, second_prime - 1)
+        lambda_n = compute.lcd(first_prime - 1, second_prime - 1)
 
         private_exponent = (
-            math.gcd_linear_combination(public_exponent, lambda_n)[0] % lambda_n
+            compute.gcd_linear_combination(public_exponent, lambda_n)[0] % lambda_n
         )
 
         self.public_key = Key(product, public_exponent)
