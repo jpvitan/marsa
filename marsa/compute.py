@@ -15,7 +15,7 @@ Developer's Website: https://jpvitan.com/
 import random
 
 
-def generate_prime_candidate(size: int) -> int:
+def generate_prime(size: int) -> int:
     primes = [
         2,
         3,
@@ -332,29 +332,29 @@ def generate_prime_candidate(size: int) -> int:
     upper_bound = 2**size - 1
 
     if lower_bound <= primes[len(primes) - 1]:
-        raise Exception("Size is too small!")
+        raise Exception("Insufficient Size")
 
     while True:
-        prime_candidate = random.randint(lower_bound, upper_bound)
-        prime_candidate_is_composite = False
+        prime = random.randint(lower_bound, upper_bound)
+        composite = False
 
-        for prime in primes:
-            if prime_candidate % prime == 0:
-                prime_candidate_is_composite = True
+        for i in primes:
+            if prime % i == 0:
+                composite = True
                 break
 
-        if prime_candidate_is_composite:
+        if composite:
             continue
 
-        passed_rabin_miller = True
+        passed = True
         for i in range(4):
-            if not rabin_miller(prime_candidate):
-                passed_rabin_miller = False
+            if not rabin_miller(prime):
+                passed = False
                 break
-        if not passed_rabin_miller:
+        if not passed:
             continue
 
-        return prime_candidate
+        return prime
 
 
 def rabin_miller(p: int) -> bool:
@@ -364,12 +364,12 @@ def rabin_miller(p: int) -> bool:
     while t % 2 == 0:
         s = s + 1
         t = t // 2
-    modulo_result = pow(a, t, p)
-    if modulo_result == 1 or modulo_result == p - 1:
+    result = pow(a, t, p)
+    if result == 1 or result == p - 1:
         return True
     for i in range(1, s):
-        modulo_result = pow(a, 2**i * t, p)
-        if modulo_result == p - 1:
+        result = pow(a, 2**i * t, p)
+        if result == p - 1:
             return True
     return False
 
@@ -404,14 +404,14 @@ def gcd_linear_combination(x: int, y: int) -> tuple:
     a = 1
     b = -(y // x)
 
-    iteration = 1
+    i = 1
 
     while True:
         r = y % x
         if r == 0:
             break
 
-        if iteration != 1:
+        if i != 1:
             quotient = y // x
             a_temp = a
             b_temp = b
@@ -422,7 +422,7 @@ def gcd_linear_combination(x: int, y: int) -> tuple:
 
         y = x
         x = r
-        iteration = iteration + 1
+        i = i + 1
 
     temp = a
     a = b
