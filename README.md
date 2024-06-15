@@ -15,7 +15,7 @@ You can install **MARSA** using pip. Simply run the following command in your te
 
 
 ```
-pip install
+pip install marsa
 ```
 
 
