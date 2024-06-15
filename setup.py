@@ -18,7 +18,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="MARSA",
+    name="marsa",
     version="1.0.0",
     author="Justine Paul Vitan",
     author_email="justinepaulvitan5@gmail.com",
