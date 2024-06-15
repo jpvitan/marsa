@@ -16,14 +16,12 @@ from marsa import compute
 
 
 class Key:
-
     def __init__(self, product: int, exponent: int):
         self.product = product
         self.exponent = exponent
 
 
 class Encryptor:
-
     def __init__(self, public_key: Key):
         self.public_key = public_key
 
@@ -32,7 +30,6 @@ class Encryptor:
 
 
 class Decryptor:
-
     def __init__(self, private_key: Key):
         self.private_key = private_key
 
@@ -41,7 +38,6 @@ class Decryptor:
 
 
 class KeyPair:
-
     def __init__(self, size: int = 2048, public_exponent: int = 65537):
         first_prime = compute.generate_prime(size // 2)
         second_prime = compute.generate_prime(size // 2)
