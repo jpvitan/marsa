@@ -21,7 +21,7 @@ setuptools.setup(
     name="marsa",
     version="1.0.0",
     author="Justine Paul Vitan",
-    author_email="justinepaulvitan5@gmail.com",
+    author_email="jpvitanx@gmail.com",
     description=(
         "A Python library that lets you experiment with the "
         "mathematics of the Rivest–Shamir–Adleman (RSA) cryptosystem."
